@@ -1,0 +1,1 @@
+<p>Chargé avec AJAX</p>
