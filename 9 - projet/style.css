@@ -3,8 +3,7 @@
     padding: 0;
 }
 
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 
@@ -20,31 +19,45 @@ header {
 header h1 {
     font-size: 40px;
     text-align: center;
+    font-family: 'Limelight', sans-serif;
     color: #FFFF;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px black;
 }
 
 /* MAIN-MENU */
-#main-menu ul{
+
+#main-menu ul {
     width: 980px;
     height: 500px;
     margin: 0 auto;
     padding-top: 148px;
 }
 
-#main-menu ul li{
-
+#main-menu ul li {
+    float: left;
+    width: 140px;
+    height: 500px;
+    /* Cache ce qui dépasse des li du contenu plus grand */
+    overflow: hidden;
+    position: relative;
 }
 
 .bw {
+    /* Permet de mettre les images bw à une position absolue et préciser un décalage par rapport à l'élément parent à gauche */
+    position: absolute;
+    left: 0;
     width: 140px;
     height: 500px;
     cursor: pointer;
     background: url('images/image700x500_bw.png') no-repeat;
     opacity: 0.7;
 }
+
 .color {
+    /* Permet de mettre les images couleur à une position absolue et préciser un décalage par rapport à l'élément parent à gauche */
+    position: absolute;
+    left: 140px;
     width: 140px;
     height: 500px;
     cursor: pointer;
@@ -52,23 +65,26 @@ header h1 {
 }
 
 /* On décale le background sur la position des x négatifs afin d'avoir la bonne partie du background pour chaque anime */
-#part2 div{
+
+#part2 div {
     background-position: -140px;
 }
 
-#part3 div{
+#part3 div {
     background-position: -280px;
 }
 
-#part4 div{
+#part4 div {
     background-position: -420px;
 }
 
-#part5 div{
+#part5 div {
     background-position: -560px;
 }
 
 .description {
+    position: absolute;
+    left: 140px;
     width: 240px;
     height: 460px;
     padding: 20px;
@@ -79,6 +95,7 @@ header h1 {
     padding-top: 20px;
     font-size: 30px;
     text-align: center;
+    font-family: 'Limelight', sans-serif;
     color: #333;
     text-transform: uppercase;
 }
@@ -87,6 +104,7 @@ header h1 {
     margin-top: 30px;
     padding: 10px;
     font-size: 26px;
+    font-family: 'Lobster', sans-serif;
     background: #D70000;
     color: #fff;
     text-align: center;
@@ -97,6 +115,53 @@ header h1 {
 .description p {
     padding-top: 35px;
     font-size: 22px;
-    color:#000;
+    font-family: 'Limelight', sans-serif;
+    color: #000;
     text-align: center;
+}
+
+/* BUTTONS-MENU */
+
+#buttons-menu {
+    float: left;
+    width: 100%;
+    padding: 170px 0 50px 0;
+}
+
+#buttons-menu ul {
+    float: left;
+    position: relative;
+    left: 50%;
+    text-align: center;
+}
+
+.button {
+    /* Aligne les items */
+    float: left;
+    /* Largeur de 150px pour chaque bouton */
+    width: 150px;
+    /* Espacement de 30px entre chaque bouton */
+    margin-left: 30px;
+    /* Epaisseur verticale des boutons */
+    padding: 10px 0;
+    position: relative;
+    /* Permet d'avoir la liste + boutons au milieu cumulé avec le float: left de ul */
+    right: 50%;
+    text-shadow: 1px 1px 1px #000;
+    font-family: 'Lobster', sans-serif;
+    text-align: center;
+    color: #FFF;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75);
+    background: #333;
+    border: 2px solid #B70000;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.hovered {
+    background: #B70000;
+    border: 2px solid #333;
+    font-size: 24px;
 }
